@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y \
     libxcb-xfixes0 \
     libx11-6 \
     libglib2.0-0 \
-    libgl1-mesa-glx \
-    ffmpeg \
+    libgl1 \
     libsm6 \
     libxext6 \
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
