@@ -1,0 +1,13 @@
+Urban Safety AI — Anomaly Detection Summary
+================================================
+Video         : test_videos/sample.mp4
+Total frames  : 1003
+FPS           : 60.0
+Duration      : 16.7s
+
+NORMAL        : 692
+SUSPICIOUS    : 189
+ANOMALY       : 122
+
+Anomaly time ranges (1 event(s)):
+  7.0s – 9.1s

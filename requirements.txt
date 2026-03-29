@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+celery
+fakeredis
+redis
+sqlalchemy
+aiosmtplib
+python-multipart
+ultralytics
+opencv-python-headless
+numpy
+python-dotenv
+scikit-learn
+joblib

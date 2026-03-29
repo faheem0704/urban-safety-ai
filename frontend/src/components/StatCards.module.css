@@ -1,0 +1,54 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 12px 0 0;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  animation: fade-in .4s ease forwards;
+  transition: box-shadow .3s;
+}
+.cardGlow {
+  border-color: rgba(248,113,113,.4);
+  animation: glow-red 2.5s ease-in-out infinite;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  animation: count-up .5s ease forwards;
+}
+.numEmpty { color: var(--text-muted); }
+.pending  {
+  color: var(--text-muted);
+  animation: pending-pulse 1.4s ease-in-out infinite;
+}
+@keyframes pending-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.green  { color: var(--accent-green); }
+.yellow { color: var(--accent-yellow); }
+.red    { color: var(--accent-red); }
+
+.sub {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}

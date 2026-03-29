@@ -1,0 +1,66 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewToggle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all .15s;
+}
+.viewToggle:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background: rgba(59,130,246,.06);
+}
+
+/* Logo */
+.logo { font-family: var(--font-heading); font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+.logoUrban  { color: var(--text-primary); }
+.logoSafety { color: var(--accent-blue); }
+.logoDot    { color: var(--text-secondary); font-size: 16px; }
+
+/* Camera */
+.camera { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; letter-spacing: 1.5px; }
+.camId    { color: var(--text-primary); }
+.sep      { color: var(--text-muted); }
+.location { color: var(--text-secondary); }
+
+/* Status pill */
+.pill {
+  display: flex; align-items: center; gap: 7px;
+  padding: 5px 12px; border-radius: 99px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+  border: 1px solid;
+}
+.pillGreen { color: var(--accent-green); border-color: rgba(74,222,128,.3); background: rgba(74,222,128,.06); }
+.pillRed   { color: var(--accent-red);   border-color: rgba(248,113,113,.3); background: rgba(248,113,113,.06); }
+
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+}
+.dotGreen {
+  background: var(--accent-green);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+.dotRed { background: var(--accent-red); }

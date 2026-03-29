@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.env
+test_videos/
+outputs/*.mp4
+outputs/*.json
+database/*.db
+frontend/node_modules/
+frontend/dist/
+models/*.pkl
