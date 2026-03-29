@@ -1,9 +1,9 @@
-export const API_URL = import.meta.env.VITE_API_URL ||
-  (window.location.hostname === 'localhost'
-    ? 'http://localhost:8080'
-    : 'https://urban-safety-ai-production.up.railway.app')
+const isProd = window.location.hostname !== 'localhost'
 
-export const WS_URL = import.meta.env.VITE_WS_URL ||
-  (window.location.hostname === 'localhost'
-    ? 'ws://localhost:8080/ws/live'
-    : 'wss://urban-safety-ai-production.up.railway.app/ws/live')
+export const API_URL = isProd
+  ? 'https://urban-safety-ai-production.up.railway.app'
+  : 'http://localhost:8080'
+
+export const WS_URL = isProd
+  ? 'wss://urban-safety-ai-production.up.railway.app/ws/live'
+  : 'ws://localhost:8080/ws/live'
