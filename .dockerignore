@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .env
 test_videos/
+temp/
 outputs/
 .git/
 frontend/node_modules/
