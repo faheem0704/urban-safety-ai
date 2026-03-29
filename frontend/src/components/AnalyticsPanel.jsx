@@ -3,6 +3,7 @@ import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer,
 } from 'recharts'
 import axios from 'axios'
+import { API_URL } from '../config'
 import styles from './AnalyticsPanel.module.css'
 
 const PIE_COLORS = ['#4ade80', '#fbbf24', '#f87171']
@@ -91,7 +92,7 @@ export default function AnalyticsPanel({ job }) {
   useEffect(() => {
     if (!jobId) { setEvents([]); return }
     setLoading(true)
-    axios.get(`/api/jobs/${jobId}/events`)
+    axios.get(`${API_URL}/api/jobs/${jobId}/events`)
       .then(r => setEvents(r.data))
       .catch(() => setEvents([]))
       .finally(() => setLoading(false))

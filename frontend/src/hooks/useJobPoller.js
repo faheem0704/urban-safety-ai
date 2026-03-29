@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
+import { API_URL } from '../config'
 
 const POLL_INTERVAL = 2000
 const TERMINAL = new Set(['complete', 'failed'])
@@ -21,7 +22,7 @@ export function useJobPoller(jobId) {
     const poll = async () => {
       if (!active) return
       try {
-        const { data } = await axios.get(`/api/jobs/${jobId}`)
+        const { data } = await axios.get(`${API_URL}/api/jobs/${jobId}`)
         if (!active) return
         setJob(data.job)
         setSummary(data.summary)
@@ -33,7 +34,7 @@ export function useJobPoller(jobId) {
             setTimeout(async () => {
               if (!active) return
               try {
-                const { data: fin } = await axios.get(`/api/jobs/${jobId}`)
+                const { data: fin } = await axios.get(`${API_URL}/api/jobs/${jobId}`)
                 if (active) { setJob(fin.job); setSummary(fin.summary) }
               } catch { /* best-effort, ignore */ }
             }, 500)

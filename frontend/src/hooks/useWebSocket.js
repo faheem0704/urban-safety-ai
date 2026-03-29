@@ -1,9 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-
-// Use window.location.host so this works on any Vite port (5173, 5174, etc.)
-// Vite's /ws proxy forwards this to ws://localhost:8080/ws/live
-const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-const WS_URL = `${protocol}//${window.location.host}/ws/live`
+import { WS_URL } from '../config'
 const MAX_ALERTS = 50
 const RECONNECT_DELAY = 3000
 

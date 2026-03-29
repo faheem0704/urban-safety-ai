@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
 import axios from 'axios'
 import { useJobPoller } from '../hooks/useJobPoller'
+import { API_URL } from '../config'
 import styles from './UploadPanel.module.css'
 
 // Explicit MIME types per extension — Windows can report different MIME types
@@ -109,7 +110,7 @@ export default function UploadPanel({ onJobUpdate }) {
 
     try {
       console.log('uploading file:', file.name)
-      const { data } = await axios.post('/api/analyze', form, {
+      const { data } = await axios.post(`${API_URL}/api/analyze`, form, {
         headers: { 'Content-Type': 'multipart/form-data' },
         onUploadProgress: (e) => {
           setProgress(Math.round((e.loaded / e.total) * 100))
